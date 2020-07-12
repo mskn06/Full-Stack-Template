@@ -1,18 +1,13 @@
-<!-- signup form -->
+<!-- login form -->
 <div class="body">
   <div>
     <form [formGroup]="user">
       <div class="form-fields">
-        <p>USERNAME</p>
-        <input type="text" placeholder="John Doe" formControlName="name" />
-      </div>
-
-      <div class="form-fields">
-        <p>Phone Number</p>
+        <p>EMAIL</p>
         <input
-          type="number"
-          placeholder="9999911111"
-          formControlName="phoneNumber"
+          type="email"
+          placeholder="johndoe@gmail.com"
+          formControlName="email"
         />
       </div>
 
