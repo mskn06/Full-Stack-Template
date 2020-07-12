@@ -20,8 +20,7 @@ export class LoginPage implements OnInit {
     private router: Router
   ) {
     this.user = this.formBuilder.group({
-      name: ['', Validators.required],
-      phoneNumber: ['', Validators.required],
+      email: ['', Validators.required],
       password: ['', Validators.required],
     });
   }
@@ -42,7 +41,7 @@ export class LoginPage implements OnInit {
       this.userData = await this.loginService.login(this.user.value).subscribe(
         (data) => {
           console.log('user', data);
-          if (data) this.router.navigate(['/reports']);
+          if (data) console.log(data);
         },
         (err) => {
           console.log(err);
